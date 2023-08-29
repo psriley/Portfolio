@@ -1,35 +1,77 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+html {
+  position: static;
+  border: 1vw solid #f2f2f2;
 }
 
-a,
-.green {
+img {
+  width: 40px;
+  height: 40px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+}
+
+li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 2vh;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+li a:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.nav {
+  font-family: "Gill Sans", sans-serif;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+header {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  height: 5vh;
+  margin: 5vh auto;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: bolder;
+}
+
+.main {
+  text-align: center;
+  /* TODO: Remove this set height and border (just used for visualization while developing) */
+  /*height: 50vh;*/
+  /*border: 5px solid white;*/
+  margin: 15vh 15vw auto 15vw;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+}
+
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5rem dashed white;
+  width: 200px;
+  height: 200px;
 }
