@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="sections">
     <my-projects/>
 <!--    <section v-for="(header, index) in headers" :key="index">-->
 <!--      <h2 ref="header">{{ header }}</h2>-->

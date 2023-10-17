@@ -1,18 +1,18 @@
 <template>
   <div class="grid">
-    <placeholder-image size="sm" />
-    <placeholder-image size="sm" />
-    <placeholder-image size="sm" />
-    <placeholder-image size="sm" />
-    <placeholder-image size="sm" />
-    <placeholder-image size="sm" />
-    <placeholder-image size="sm" />
-    <placeholder-image size="sm" />
-    <placeholder-image size="sm" />
-    <placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
+    <clickable-placeholder-image size="sm" />
   </div>
 </template>
 
 <script setup>
-import PlaceholderImage from "@/components/PlaceholderImage.vue";
+import ClickablePlaceholderImage from "@/components/ClickablePlaceholderImage.vue";
 </script>

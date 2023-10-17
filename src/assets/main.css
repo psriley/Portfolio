@@ -6,10 +6,12 @@
 }
 
 body {
-  height: 500vh;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 html {
+  user-select: none;
   scroll-behavior: smooth;
   /*position: static;*/
   /*border: 1vw solid var(--accent-color);*/
@@ -22,82 +24,27 @@ img {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   /*overflow: hidden;*/
-  text-align: center;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-}
-
-.nav ul {
-  background-color: var(--navbar-color);
-}
-
-li {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  align-self: flex-start;
-  margin: auto 2vh;
-}
-
-li a {
-  color: var(--accent-color);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: var(--accent-color);
-  cursor: pointer;
-}
-
-.nav {
-  font-family: "Gill Sans", sans-serif;
-}
-
-.menu {
-  position: sticky;
-  top: 0;
-  align-self: start;
-  font-size: 1rem;
-}
-
-.menu ul li {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  color: #f2f2f2;
-}
-
-.menu ul li.active {
-  background-color: #f2f2f2;
-  color: var(--color-background);
 }
 
 header {
   color: var(--accent-color);
   text-align: center;
   font-size: 4rem;
-  height: 5vh;
-  margin: 5vh auto;
+  height: 20vh;
   font-family: "Gill Sans", sans-serif;
   font-weight: bolder;
 }
 
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
   text-align: center;
   /* TODO: Remove this set height and border (just used for visualization while developing) */
   /*height: 50vh;*/
   /*border: 5px solid white;*/
-  margin: 15vh 15vw auto 15vw;
+  margin: 10vh 10vw auto 0vw;
 }
 
 .grid {
@@ -120,7 +67,8 @@ header {
 }
 
 .placeholder-sm {
-  transition: box-shadow .3s;
+  display: flex;
+  transition: box-shadow 0.3s;
   justify-content: center;
   align-items: center;
   border: 0.5rem dashed var(--accent-color);
@@ -133,6 +81,17 @@ header {
 .placeholder-sm:hover {
   cursor: pointer;
   box-shadow: 0 0 22px rgba(255, 255, 255, 0.5);
+  border: 0.5rem solid var(--accent-color);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 
 .subtitle {
@@ -153,16 +112,49 @@ header {
   font-size: 5rem;
 }
 
-.content {
+.sections {
   /*display: flex;*/
   /*justify-content: center;*/
   /*align-items: center;*/
-  text-align: center;
   /* TODO: Remove this set height and border (just used for visualization while developing) */
   height: 50vh;
-  margin: 15vh 15vw auto 15vw;
+  margin: 20vh 10vw auto 10vw;
 }
 
-.content section {
+.sections section {
   padding: 20px;
+}
+
+.content {
+  /*grid-area: content;*/
+  /*display: flex;*/
+  /*!*flex-wrap: wrap;*!*/
+  /*align-items: flex-start;*/
+}
+
+.modal-bg {
+  /* always fix our modal to the viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  /* darken the screen behind the modal */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /* center the modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  /* needed to position the button */
+  position: relative;
+
+  background: white;
+  padding: 50px 100px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 5px 2px rgba(0, 0, 0, 0.1);
 }

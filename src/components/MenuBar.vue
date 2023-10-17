@@ -2,7 +2,7 @@
   <ul>
     <li v-for="(section, index) in sections" :key="index" :class="{ active: activeSection === index }">
 <!--        The bound href here works because we have bound the id to our h2 elements above-->
-      <a :href="'#' + section.id">{{ section.title }}</a>
+      <a :href="'#' + section.id"><button class="menu-button">{{ section.title }}</button></a>
     </li>
   </ul>
 </template>
@@ -40,7 +40,7 @@ export default {
       // ],
       sections: [
         { id: 'projects', title: 'Projects', offsetTop: 0 },
-        { id: 'section-2', title: 'Section 2', offsetTop: 0 },
+        { id: 'section-2', title: 'Game Jam Games', offsetTop: 0 },
         // Add more sections here
       ],
       activeSection: null,
