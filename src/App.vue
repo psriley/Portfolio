@@ -6,9 +6,9 @@
     PEYTON RILEY
   </header>
   <body>
-    <aside class="menu">
-      <menu-bar/>
-    </aside>
+<!--    <aside class="menu">-->
+<!--      <menu-bar/>-->
+<!--    </aside>-->
     <div class="content">
       <div class="main">
         <main-grid/>

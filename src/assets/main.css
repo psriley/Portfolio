@@ -44,7 +44,7 @@ header {
   /* TODO: Remove this set height and border (just used for visualization while developing) */
   /*height: 50vh;*/
   /*border: 5px solid white;*/
-  margin: 10vh 10vw auto 0vw;
+  margin: 10vh 10vw auto 10vw;
 }
 
 .grid {
@@ -132,29 +132,31 @@ header {
   /*align-items: flex-start;*/
 }
 
-.modal-bg {
-  /* always fix our modal to the viewport */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+/*.modal-bg {*/
+/*  !* always fix our modal to the viewport *!*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100vw;*/
+/*  height: 100vh;*/
 
-  /* darken the screen behind the modal */
-  background-color: rgba(0, 0, 0, 0.5);
+/*  !* darken the screen behind the modal *!*/
+/*  background-color: rgba(0, 0, 0, 0.5);*/
 
-  /* center the modal */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/*  !* center the modal *!*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
 
-.modal {
-  /* needed to position the button */
-  position: relative;
+/*.modal {*/
+/*  position: relative;*/
 
-  background: white;
-  padding: 50px 100px;
-  border-radius: 5px;
-  box-shadow: 0px 10px 5px 2px rgba(0, 0, 0, 0.1);
-}
+/*  background: white;*/
+/*  padding: 50px 100px;*/
+/*  border-radius: 5px;*/
+/*  box-shadow: 0px 10px 5px 2px rgba(0, 0, 0, 0.1);*/
+
+/*  !* this prevents the user from being able to interactive with other parts of the site while the modal is open *!*/
+/*  z-index: 1;*/
+/*}*/

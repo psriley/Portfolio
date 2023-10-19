@@ -59,8 +59,8 @@
     <transition name="modal-animation">
       <div v-if="isModalOpen" class="modal" @click="closeModal">
         <div class="modal-content" @click.stop>
-          <span class="close" @click="closeModal">&times;</span>
-          <p>Modal content goes here.</p>
+          <modal-content :title="content['title']" :description="content['description']" />
+          <div class="close" @click="closeModal">&times;</div>
         </div>
       </div>
     </transition>
@@ -68,8 +68,11 @@
 </template>
 
 <script>
+import ModalContent from "@/components/ModalContent.vue";
+
 export default {
   name: 'ClickablePlaceholderImage',
+  components: {ModalContent},
   data() {
     return {
       isModalOpen: false,
@@ -77,10 +80,14 @@ export default {
   },
   props: {
     text: {
-    type: String,
-    required: false,
-    default: "Placeholder",
+      type: String,
+      required: false,
+      default: "Placeholder",
     },
+    content: {
+      type: Object,
+      required: true,
+    }
   },
   methods: {
     openModal() {
@@ -109,6 +116,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* this prevents the user from being able to interactive with other parts of the site while the modal is open */
+  z-index: 1;
+
+  /* TODO: probably should prevent scrolling here as well */
 }
 
 .modal-content {
@@ -119,9 +131,17 @@ export default {
   padding: 50px 100px;
   border-radius: 5px;
   box-shadow: 0px 10px 5px 2px rgba(0, 0, 0, 0.1);
+  color: black;
+
+  width: 50vw;
+  height: 50vh;
 }
 
 .close {
+  font-size: 2rem;
+  position: absolute;
+  top: 2vh;
+  right: 4vh;
   cursor: pointer;
   color: red;
 }
