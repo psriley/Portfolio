@@ -1,0 +1,79 @@
+.modal {
+  /* always fix our modal to the viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  /* darken the screen behind the modal */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /* center the modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* this prevents the user from being able to interactive with other parts of the site while the modal is open */
+  z-index: 1;
+
+  /* TODO: probably should prevent scrolling here as well */
+}
+
+.modal-content {
+  /* needed to position the button */
+  position: relative;
+
+  background: white;
+  padding: 50px 100px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 5px 2px rgba(0, 0, 0, 0.1);
+  color: black;
+
+  width: 50vw;
+  height: min-content;
+}
+
+.close {
+  font-size: 2rem;
+  position: absolute;
+  top: 2vh;
+  right: 4vh;
+  cursor: pointer;
+  color: red;
+}
+
+.modal-animation-enter-active,
+.modal-animation-leave-active {
+  transition: opacity .3s cubic-bezier(.52, .02, .19, 1.02);
+}
+
+.modal-animation-enter-from,
+.modal-animation-leave-to {
+  opacity: 0;
+}
+
+.modal-animation-enter-to,
+.modal-animation-leave-from {
+  opacity: 1;
+}
+
+.modal-link {
+  background: white;
+  border: 5px solid var(--navbar-color);
+  border-radius: 25px;
+  width: 8vw;
+  height: 8vh;
+  margin: 20px;
+  font-size: 1rem;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.modal-link:hover {
+  background: var(--navbar-color);
+  /*border: 5px solid darkred;*/
+  color: white;
+  cursor: pointer;
+}

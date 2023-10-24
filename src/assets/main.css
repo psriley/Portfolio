@@ -36,6 +36,12 @@ header {
   font-weight: bolder;
 }
 
+label {
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+}
+
 .main {
   /*display: flex;*/
   /*justify-content: center;*/
@@ -49,7 +55,7 @@ header {
 
 .grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 2vw;
