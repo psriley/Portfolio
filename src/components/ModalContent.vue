@@ -23,7 +23,7 @@
         <p>Platforms: PC, Mac</p>
       </div>
       <div>
-        <a v-if="gameLink" :href="gameLink" class="modal-link">Game Page</a>
+        <a v-if="gameLink" :href="gameLink" class="modal-link">Itch.io Page</a>
         <a v-if="devlogLink" :href="devlogLink" class="modal-link">Devlog Series</a>
       </div>
     </div>
