@@ -1,7 +1,8 @@
 <template>
   <div>
     <div :class="placeholderClass">
-      <p>{{ text }}</p>
+      <img v-if="image" class="fit-image" :src="image"/>
+      <p v-else>{{ text }}</p>
       <p class="subtitle">
         <i>{{ subtitle }}</i>
       </p>
@@ -31,7 +32,11 @@ export default {
       type: String,
       required: false,
       default: "lg",
-    }
+    },
+    image: {
+      type: String,
+      required: false,
+    },
   },
   computed: {
     placeholderClass() {

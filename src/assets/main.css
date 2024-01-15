@@ -32,7 +32,7 @@ header {
   text-align: center;
   font-size: 4rem;
   height: 20vh;
-  font-family: "Gill Sans", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bolder;
 }
 
@@ -50,7 +50,7 @@ label {
   /* TODO: Remove this set height and border (just used for visualization while developing) */
   /*height: 50vh;*/
   /*border: 5px solid white;*/
-  margin: 10vh 10vw auto 10vw;
+  margin: 15vh 10vw auto 10vw;
 }
 
 .grid {
@@ -61,14 +61,20 @@ label {
   gap: 2vw;
 }
 
+.fit-image {
+  border-radius: 1.75rem;
+  width: 100%; 
+  height: auto;
+}
+
 .placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 0.5rem dashed var(--accent-color);
   border-radius: 2rem;
-  width: 400px;
-  height: 400px;
+  width: 640px;
+  height: 360px;
   position: relative;
 }
 
@@ -103,7 +109,7 @@ label {
 .subtitle {
   position: absolute;
   /* an extra 20 pixels lower than the placeholder (the parent object) height */
-  top: 420px;
+  top: 400px;
   font-size: 2rem;
 }
 
@@ -112,8 +118,8 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   position: relative;
   font-size: 5rem;
 }
